@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一次JS作業 第二題</title>
+    <script>
+        let hour = 300;
+        let money = 120;
+        let salary = 0;
+        switch (true) {
+            case (hour <= 60):
+                salary = hour * money;
+                break;
+            case (hour > 60 && hour <= 80):
+                salary = (60 * money) + (1.25 * money * (hour - 60));
+                break;
+            case (hour > 80):
+                salary = (60 * money) + (20 * 1.25 * money) + (1.5 * money * (hour - 80));
+                break;
+        }
+        document.write("總薪資：" + salary + "元");
+        console.log("總薪資：" + salary + "元");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

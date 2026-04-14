@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一次JS作業 第三題</title>
+    <script>
+        let year = 19;
+        let leap;//這邊裡面不能直接宣告字串true或是false，會導致字串與布林值判斷錯誤。字串內有值("false")則布林值為true
+        //或是這樣宣告：let leap = false;
+        if (year % 400 === 0) {
+            leap = true;//布林值不用+""
+        }
+        else if (year % 100 === 0) {
+            leap = false;//布林值不用+""
+        }
+        else if (year % 4 === 0) {
+            leap = true;//布林值不用+""
+        }
+        document.write(year + (leap ? "是閏年" : "是平年"));
+        console.log(year + (leap ? "是閏年" : "是平年"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

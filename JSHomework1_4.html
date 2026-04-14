@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一次JS作業 第四題</title>
+    <script>
+        let money = 1009;
+        let price = 1000;
+        let change;
+        let takeChange = [1000, 500, 100, 50, 10, 5, 1];
+        /*
+        let paperTen = 0;
+        let paperFive = 0;
+        let paperOne = 0;
+        let coinFifty = 0;
+        let coinTen = 0;
+        let coinFive = 0;
+        */
+        if (money > price) {
+            change = money - price;
+            document.write("找零：");
+            console.log("找零：");
+        }
+        else if (money = price) {
+            document.write("不必找零");
+            console.log("不必找零");
+        }
+        else if (money < price) {
+            document.write("金額不足");
+            console.log("金額不足");
+        }
+        /*
+        if (change > 1000) {
+
+        }
+        else if (change > 500) {
+
+        }
+        else if (change > 100) {
+
+        }
+        else if (change > 50) {
+
+        }
+        else if (change > 10) {
+
+        }
+        else if (change > 5) {
+            coinFive = Math.floor(change / 5);
+            change = change % 5;
+            document.write("找零：" + coinFive + "個5元硬幣 " + change + "個1元硬幣");
+            console.log("找零：" + coinFive + "個5元硬幣 " + change + "個1元硬幣");
+        }
+        else if (change > 1) {
+            document.write("找零：" + change + "個1元硬幣");
+            console.log("找零：" + change + "個1元硬幣");
+        }
+            */
+        for (let coin of takeChange) {
+            let count = Math.floor(change / coin);
+            change = change % coin;
+            if (count > 0) {
+                let unit = coin >= 100 ? "張 " : "個 ";
+                let type = coin >= 100 ? "元鈔票" : "元硬幣";
+                document.write(coin + type + "： " + count + " " + unit);
+                console.log(+ coin + type + "： " + count + " " + unit);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
